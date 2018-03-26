@@ -2,6 +2,8 @@ body {
 	font-family: 'Helvetica', sans-serif;
 	color: white;
 	background-color: #1D3440;
+    text-align: center;
+
 }
 
 button {
@@ -36,5 +38,9 @@ button {
 #blue {
 	background-color: darkblue
 }
+
+img {
+	width: 350px;
+
 
 
