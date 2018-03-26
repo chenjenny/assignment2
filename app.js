@@ -164,10 +164,10 @@ const images = [
     "images/dog4.jpg"
 ];
 const captions = [
-    "puppy 1",
-    "puppy 2",
-    "puppy 3",
-    "puppy 4"
+    "",
+    "",
+    "",
+    ""
 ];
 
 const anwser = document.getElementById('question4').value;
@@ -278,3 +278,21 @@ for (let i = 0; i < 4; i++) {
 //	container.appendChild(imgContainer);
 //};
 //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
