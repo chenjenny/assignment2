@@ -39,7 +39,7 @@ var personality = {
 	dogs: -1
 };
 
-document.getElementById('question1').style.display = "block";
+document.getElementById('question1').style.display = "none";
 document.getElementById('question2').style.display = "none";
 document.getElementById('question3').style.display = "none";
 document.getElementById('question4').style.display = "none";
