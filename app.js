@@ -36,15 +36,14 @@ const DocumentaryBtn = document.getElementById('documentary');
 var personality = {
 	happy: 0,
 	sad: 0,
-
+	dogs: -1
 };
+
 document.getElementById('question1').style.display = "block";
 document.getElementById('question2').style.display = "none";
 document.getElementById('question3').style.display = "none";
 document.getElementById('question4').style.display = "none";
 document.getElementById('question5').style.display = "none";
-
-
 
 
 // start
@@ -181,28 +180,36 @@ for (let i = 0; i < 4; i++) {
 	img.src = images[i];
 	img.id = "img" + i;
 	img.classList.add("slide");
-	images[i];
 
-	images[0].onclick = function () {
-		personality.dog1++;
+	img.onclick = function() {
+		personality.dogs = i;
+		
 		document.getElementById('question4').style.display = "none";
 		document.getElementById('question5').style.display = "block";
 	};
-	images[1].onclick = function () {
-		personality.dog2++;
-		document.getElementById('question4').style.display = "none";
-		document.getElementById('question5').style.display = "block";
-	};
-	images[2].onclick = function () {
-		personality.dog3++;
-		document.getElementById('question4').style.display = "none";
-		document.getElementById('question5').style.display = "block";
-	};
-	images[3].onclick = function () {
-		personality.dog4++;
-		document.getElementById('question4').style.display = "none";
-		document.getElementById('question5').style.display = "block";
-	};
+	
+	
+//	images[0].onclick = function () {
+//		console.log(this);
+//		personality.dog1++;
+//		document.getElementById('question4').style.display = "none";
+//		document.getElementById('question5').style.display = "block";
+//	};
+//	images[1].onclick = function () {
+//		personality.dog2++;
+//		document.getElementById('question4').style.display = "none";
+//		document.getElementById('question5').style.display = "block";
+//	};
+//	images[2].onclick = function () {
+//		personality.dog3++;
+//		document.getElementById('question4').style.display = "none";
+//		document.getElementById('question5').style.display = "block";
+//	};
+//	images[3].onclick = function () {
+//		personality.dog4++;
+//		document.getElementById('question4').style.display = "none";
+//		document.getElementById('question5').style.display = "block";
+//	};
 
 	imgContainer.appendChild(img);
 
