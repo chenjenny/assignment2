@@ -2,7 +2,7 @@ body {
 	font-family: 'Helvetica', sans-serif;
 	color: white;
 	background-color: #1D3440;
-    text-align: center;
+	text-align: center;
 
 }
 
@@ -12,7 +12,7 @@ button {
 	padding: 12px 12px;
 	margin-right: 10px;
 	color: white;
-	font-size: 16px;
+	font-size: 30px;
 }
 
 #yellow {
@@ -39,11 +39,35 @@ button {
 	background-color: darkblue
 }
 
-<<<<<<< HEAD
-img {
-	width: 350px;
+/*
+#img0, #img1, #img2, #img3 {
+	
+	height: 30%;
+	width: 300px;
+	float: left;
+	margin: 3% 0 2% 2%;
+	text-align: left;
+}
+*/
+
+.cats img {
+	width: 250px;
+	height: auto;
+
+}
+
+.catImgContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
 
 
+.dogs img {
+	width: 250px;
+	height: auto;
+}
 
-=======
->>>>>>> b5299efac29d05a2395791e617e315ae5a778d1d
+.dogImgContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
