@@ -145,6 +145,15 @@ const images = [
     "images/dog3.jpg",
     "images/dog4.jpg"
 ];
+<<<<<<< HEAD
+=======
+const captions = [
+    "",
+    "",
+    "",
+    ""
+];
+>>>>>>> 5f22baba147c89b4fcf61aeba9e34455c26db6d9
 
 //const captions = [
 //    "puppy 1",
@@ -183,6 +192,7 @@ for (let i = 0; i < 4; i++) {
 //	caption.classList.add("captions");
 //	caption.textContent = captions[i];
 //	imgContainer.appendChild(caption);
+<<<<<<< HEAD
 
 	container.appendChild(imgContainer);
 	
@@ -230,4 +240,47 @@ for (let i = 0; i < catImages.length; i++) {
 	});
 	
 }
+=======
+//
+//	container.appendChild(imgContainer);
+//};
+//
+
+// -----------------------------------------------------------------------
+// FINAL RESULT 
+
+//var score = 0;
+
+//if (question1 == "Blue" "Green" "Purple") {
+//	score++;
+//}
+
+//if (question2 == "RELIEVED" "WHATEVER" ) {
+//	score++;
+//}
+
+//if (question3 == "THRILLER/HORROR" "DOCUMENTARY" ) {
+//	score++;
+//}
+
+//document.getElementById("after_submit").style.visibility = "visible";
+//document.getElementById("score").innerHTML = "You Got " + score + " score.";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 5f22baba147c89b4fcf61aeba9e34455c26db6d9
 

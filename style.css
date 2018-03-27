@@ -39,6 +39,7 @@ button {
 	background-color: darkblue
 }
 
+<<<<<<< HEAD
 /*
 #img0, #img1, #img2, #img3 {
 	
@@ -71,3 +72,13 @@ button {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
+=======
+#img0, #img1, #img2, #img3 {
+	height: 30%;
+	width: 45%;
+	float: left;
+	margin: 3% 0 2% 2%;
+	text-align: center;
+}
+
+>>>>>>> 5f22baba147c89b4fcf61aeba9e34455c26db6d9
