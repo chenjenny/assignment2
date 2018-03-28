@@ -24,7 +24,7 @@ const DocumentaryBtn = document.getElementById('documentary');
 
 var personality = {
 	Introvert: 0,
-	Extrovert: 0,
+	Extrovert: 0
 };
 
 document.getElementById('question1').style.display = "none";
@@ -42,6 +42,8 @@ startBtn.onclick = function () {
 	document.getElementById('question1').style.display = "block";
 	document.getElementById('start').style.display = "none";
 	document.getElementById("banner").remove();
+	console.log('remove banner');
+
 }
 //question 1 color
 function getColor(event) {
@@ -50,25 +52,36 @@ function getColor(event) {
 
 	if (color === 'yellow') {
 		personality.Introvert += 1;
+		console.log('you pick yellow');
+
 
 	} else if (color === 'blue') {
 		personality.Extrovert += 1;
+		console.log('you pick blue');
+
 
 	} else if (color === 'green') {
 		personality.Introvert += 1;
+		console.log('you pick green');
+
 
 	} else if (color === 'purple') {
 		personality.Extrovert += 1;
+		console.log('you pick purple');
+
 
 	} else if (color === 'red') {
 		personality.Introvert += 1;
+		console.log('you pick red');
+
 
 	} else if (color === 'orange') {
 		personality.Extrovert += 1;
+		console.log('you pick orange');
+
 
 	}
 
-	//	START
 
 	document.getElementById('question1').style.display = "none";
 	document.getElementById('question2').style.display = "block";
@@ -88,7 +101,8 @@ function getMood(event) {
 
 	if (mood === 'annoyed') {
 		personality.Introvert += 1;
-		console.log('mood');
+		console.log('you pick annoyed');
+
 	} else if (mood === 'rejected') {
 		personality.Extrovert += 1;
 
@@ -116,7 +130,7 @@ function getMovie(event) {
 
 	if (movie === 'comedy') {
 		personality.Introvert += 1;
-//		console.log('movie');
+
 	} else if (movie === 'action') {
 		personality.Extrovert += 1;
 
@@ -158,7 +172,6 @@ const images = [
 //];
 
 //question 4 dog
-
 const answser = document.getElementById('question4').value;
 const container = document.querySelector(".dogImgContainer");
 for (let i = 0; i < 4; i++) {
@@ -179,13 +192,13 @@ for (let i = 0; i < 4; i++) {
 
 	imgContainer.appendChild(img);
 
-//	const caption = document.createElement('p');
-//	caption.classList.add("captions");
-//	caption.textContent = captions[i];
-//	imgContainer.appendChild(caption);
+	//	const caption = document.createElement('p');
+	//	caption.classList.add("captions");
+	//	caption.textContent = captions[i];
+	//	imgContainer.appendChild(caption);
 
 	container.appendChild(imgContainer);
-	
+
 };
 
 
@@ -208,26 +221,67 @@ for (let i = 0; i < catImages.length; i++) {
 	img.id = "catImage" + i;
 	imgContainer.appendChild(img);
 	container5.appendChild(imgContainer);
+
 	img.addEventListener('click', function (event) {
+
 		const imgId = event.target.id;
 		if (imgId === 'catImage0') {
 			personality.Introvert += 1;
-			console.log('You clicked a cute cat!');
+			console.log('cat image 0');
+
 		} else if (imgId === 'catImage1') {
 			personality.Extrovert += 1;
+			console.log('cat image 1');
 
 		} else if (imgId === 'catImage2') {
 			personality.Extrovert += 1;
+			console.log('cat image 2');
 
 		} else if (imgId === 'catImage3') {
 			personality.Introvert += 1;
+			console.log('cat image 3');
+
 		} else if (imgId === 'catImage4') {
 			personality.Extrovert += 1;
+			console.log('cat image 4');
+
 		}
 		document.getElementById('question5').style.display = 'none';
 		document.getElementById('results').style.display = 'none';
-		
+
 	});
-	
+
 }
 
+
+//results
+const containerResults = document.getElementById('personality');
+const Text = document.createElement('p');
+
+document.getElementById("catImage0").onclick = function () {
+	results.introvert++;
+	console.log('work');
+	document.getElementById('question5').style.display = "none";
+	document.getElementById('results').style.display = "block";
+	console.log('hello');
+
+//	results.appendChild('p');
+
+	if (personality.introvert >= 7) {
+		message.textContent = "You're an Introvert";
+
+	}
+};
+
+document.getElementById("catImage1").onclick = function () {
+	results.extrovert++;
+	document.getElementById('question5').style.display = "none";
+	document.getElementById('results').style.display = "block";
+	//	final.appendChild(final);
+
+	if (personality.extrovert >= 3) {
+
+		finalContainer.textContent = "You're an Extrovert";
+
+	}
+};
