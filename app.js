@@ -97,7 +97,9 @@ BlueBtn.addEventListener('click', getColor);
 
 //question 2 mood
 function getMood(event) {
-	const mood = event.target.value;
+	console.log(event.target);
+	const mood = event.target.id;
+	console.log(mood);
 
 	if (mood === 'annoyed') {
 		personality.Introvert += 1;
@@ -126,7 +128,7 @@ WhateverBtn.addEventListener('click', getMood);
 
 //question 3
 function getMovie(event) {
-	const movie = event.target.value;
+	const movie = event.target.id;
 
 	if (movie === 'comedy') {
 		personality.Introvert += 1;
@@ -247,41 +249,26 @@ for (let i = 0; i < catImages.length; i++) {
 
 		}
 		document.getElementById('question5').style.display = 'none';
-		document.getElementById('results').style.display = 'none';
+		document.getElementById('results').style.display = 'block';
+
+
+		//results
+		const containerResults = document.getElementById('results');
+		const Text = document.createElement('h1');
+		containerResults.appendChild(Text);
+	
+		
+		if (personality.Introvert > personality.Extrovert) {
+			Text.textContent = "You're an Introvert";
+		} else if (personality.Introvert  <  personality.Extrovert) {
+			Text.textContent = "You're an Extrovert";
+		} else {
+			Text.textContent= "You're Both!"
+		}
+
 
 	});
 
 }
 
 
-//results
-const containerResults = document.getElementById('personality');
-const Text = document.createElement('p');
-
-document.getElementById("catImage0").onclick = function () {
-	results.introvert++;
-	console.log('work');
-	document.getElementById('question5').style.display = "none";
-	document.getElementById('results').style.display = "block";
-	console.log('hello');
-
-//	results.appendChild('p');
-
-	if (personality.introvert >= 7) {
-		message.textContent = "You're an Introvert";
-
-	}
-};
-
-document.getElementById("catImage1").onclick = function () {
-	results.extrovert++;
-	document.getElementById('question5').style.display = "none";
-	document.getElementById('results').style.display = "block";
-	//	final.appendChild(final);
-
-	if (personality.extrovert >= 3) {
-
-		finalContainer.textContent = "You're an Extrovert";
-
-	}
-};
