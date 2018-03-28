@@ -252,6 +252,7 @@ for (let i = 0; i < catImages.length; i++) {
 		document.getElementById('results').style.display = 'block';
 
 
+		
 		//results
 		const containerResults = document.getElementById('results');
 		const Text = document.createElement('h1');
